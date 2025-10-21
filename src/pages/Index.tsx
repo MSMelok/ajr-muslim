@@ -50,7 +50,7 @@ const Index = () => {
       <footer className="border-t py-6 mt-auto">
         <div className="container mx-auto px-4">
           <p className="text-center text-sm text-muted-foreground">
-            © 2024 أجر - جميع الأحاديث من مصادر صحيحة ومعتمدة
+            © 2024 أجر - صدقة جارية للمطور فادعوا الله له
           </p>
         </div>
       </footer>
