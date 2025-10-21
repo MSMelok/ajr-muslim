@@ -3,6 +3,7 @@ import { Hero } from "@/components/Hero";
 import { PrayerCalculator } from "@/components/PrayerCalculator";
 import { AgeCalculator } from "@/components/AgeCalculator";
 import { Marketplace } from "@/components/Marketplace";
+import { BackgroundDoodle } from "@/components/BackgroundDoodle";
 import { Button } from "@/components/ui/button";
 import { Home } from "lucide-react";
 
@@ -16,7 +17,9 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col relative">
+      <BackgroundDoodle />
+      
       {currentSection !== 'home' && (
         <div className="border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 sticky top-0 z-50">
           <div className="container mx-auto px-4 py-3">
