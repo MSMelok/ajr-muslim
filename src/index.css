@@ -84,7 +84,7 @@ All colors MUST be HSL.
 }
 
 
-    #lovable-badge {
+    html #lovable-badge {
         opacity: 0 !important;
         display: none !important;
       }
