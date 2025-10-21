@@ -24,7 +24,7 @@ export const Hero = ({ onNavigate }: HeroProps) => {
         </div>
         
         <p className="text-lg text-muted-foreground max-w-xl mx-auto">
-          اكتشف الوقت الحقيقي المتاح لك للعبادة، واستثمر كل لحظة في الأعمال الصالحة
+          اكتشف الوقت المتاح لك للعبادة، واستثمر في الأعمال الصالحة
         </p>
         
         <div className="flex flex-col sm:flex-row gap-3 justify-center max-w-md mx-auto">
