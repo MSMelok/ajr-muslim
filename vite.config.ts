@@ -14,6 +14,6 @@ export default defineConfig(({ mode }) => ({
     alias: {
       "@": path.resolve(__dirname, "./src"),
     },
-    base: "/ajr-muslim/",
+    base: "./",
   },
 }));
