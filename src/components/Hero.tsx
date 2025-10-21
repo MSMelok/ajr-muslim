@@ -9,6 +9,11 @@ export const Hero = ({ onNavigate }: HeroProps) => {
   return (
     <section className="py-20 px-4">
       <div className="container mx-auto max-w-2xl text-center space-y-8">
+        <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full border border-primary/20">
+          <span className="text-xl">✨</span>
+          <span className="text-sm font-medium text-primary">منصة الأجر والثواب</span>
+        </div>
+        
         <div className="space-y-4">
           <h1 className="text-5xl md:text-6xl font-bold">
             أجر
