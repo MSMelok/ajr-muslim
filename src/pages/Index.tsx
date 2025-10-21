@@ -4,7 +4,7 @@ import { PrayerCalculator } from "@/components/PrayerCalculator";
 import { AgeCalculator } from "@/components/AgeCalculator";
 import { Marketplace } from "@/components/Marketplace";
 import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
+import { Home } from "lucide-react";
 
 type Section = 'home' | 'prayer' | 'age' | 'marketplace';
 
@@ -13,27 +13,26 @@ const Index = () => {
 
   const handleNavigate = (section: Section) => {
     setCurrentSection(section);
-    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen flex flex-col">
       {currentSection !== 'home' && (
-        <div className="border-b bg-card/50 backdrop-blur-sm sticky top-0 z-50">
-          <div className="container mx-auto px-4 py-4">
+        <div className="border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 sticky top-0 z-50">
+          <div className="container mx-auto px-4 py-3">
             <Button
               variant="ghost"
               onClick={() => handleNavigate('home')}
               className="gap-2"
             >
-              <ArrowRight className="w-4 h-4" />
-              العودة للرئيسية
+              <Home className="w-4 h-4" />
+              الرئيسية
             </Button>
           </div>
         </div>
       )}
 
-      <div className="container mx-auto px-4 py-8">
+      <main className="flex-1 container mx-auto px-4 py-8">
         {currentSection === 'home' && (
           <Hero onNavigate={(section) => handleNavigate(section)} />
         )}
@@ -43,18 +42,13 @@ const Index = () => {
         {currentSection === 'age' && <AgeCalculator />}
         
         {currentSection === 'marketplace' && <Marketplace />}
-      </div>
+      </main>
 
-      <footer className="mt-16 border-t py-8">
+      <footer className="border-t py-6 mt-auto">
         <div className="container mx-auto px-4">
-          <div className="text-center space-y-2">
-            <p className="text-sm text-muted-foreground">
-              © 2024 أجر - منصة حساب العبادة والأذكار الإسلامية
-            </p>
-            <p className="text-xs text-muted-foreground">
-              جميع الأحاديث من مصادر صحيحة ومعتمدة
-            </p>
-          </div>
+          <p className="text-center text-sm text-muted-foreground">
+            © 2024 أجر - جميع الأحاديث من مصادر صحيحة ومعتمدة
+          </p>
         </div>
       </footer>
     </div>
